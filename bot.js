@@ -174,7 +174,7 @@ client.on("ready", () => {
     })
 })
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.find('name', "❰•『welcome』•❱");
+    let channel = member.guild.channels.find('name', "・discord");
     if (!channel) {
         console.log("!channel fails");
         return;
@@ -1118,9 +1118,7 @@ Afm ( لعرض حالت الاعضاء )
 Aping ( لعرض سرعه النت تبعك )
 Aavatar ( لعرض صوره حسابك )
 Aprofile ( لازهار البروفايل حقك )
-
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-
 • Staff - الاداره •
 Aban ( حظر الشخصيه )
 Akick ( طرد الشخصيه )
@@ -1139,9 +1137,7 @@ Aautorole ( لتفعيل الاوتو رول )
 Arole ( لاعطاء رتبه )
 Aclear ( لمسح لشات )
 Aclear <num> ( لمسح الشات بعدد )
-
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-
 Devloped By <@463093557926952980>
 **`)
    message.channel.send(e).then(m => m.delete(5000))
@@ -1211,13 +1207,13 @@ client.on("message", async function(msg) {
             }
         }
     }
-});//The code created by @Future | Skip#0372
+});//The code created by @RG , Sha Her#2199
 
 client.on("message", message => {
     let roleembed1 = new Discord.RichEmbed()
     .setDescription(`
     أمثله على الأوامر :
-    $role @Future | Skip#0372 rolename : لسحب رتبة لعضو معين
+    $role @RG , Sha Her rolename : لسحب رتبة لعضو معين
     $role all rolename : لسحب رتبة للجميع
     $role humans rolename : لسحب رتبة للاشخاص فقط
     $role bots rolename : لسحب رتبة لجميع البوتات`)
@@ -1506,4 +1502,4 @@ message.channel.sendFile(canvas.toBuffer())
 
 })
 
-        client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
