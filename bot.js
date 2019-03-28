@@ -34,11 +34,11 @@ const client = new Discord.Client({disableEveryone: true});
 
 const request = require('request');
 
-const prefix = '.'
+const prefix = 'A'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-	client.user.setGame(`Bhelp|DarkNight  .`,'https://www.twitch.tv/v5bz');
+	client.user.setGame(`Ahelp|iiAhmed_Hero  .`,'https://www.twitch.tv/v5bz');
 });
 
 
@@ -47,7 +47,7 @@ client.on('ready', () => {
 
   client.on("guildMemberAdd", member => {
     member.createDM().then(function (channel) {
-    return channel.send(`**Welcome To Dark Night** :beers: 
+    return channel.send(`**Welcome To iiAhmed_Hero Server** :beers: 
     **Enjoy** :beers: 
 [ ${member} ]`) 
   }).catch(console.error)
@@ -61,7 +61,7 @@ client.on('ready', () => {
 
       client.on('message',function(message) {
         if (message.author.bot) return;
-      var prefix = "B";
+      var prefix = "A";
                         if(!message.channel.guild) return;
       
                           if (message.content === prefix + "fm") {
@@ -80,7 +80,7 @@ client.on('ready', () => {
             });  
 
      client.on('message', message => {
-                    var prefix = ".";
+                    var prefix = "A";
                            if(message.content === prefix + "mc") {
                                                if(!message.channel.guild) return message.reply('** This command only for servers**');
                     
@@ -165,7 +165,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("546433346461499423")
+        guild = client.guilds.get("483278789149851649")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -174,7 +174,7 @@ client.on("ready", () => {
     })
 })
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.find('name', "・discord");
+    let channel = member.guild.channels.find('name', "❰•『welcome』•❱");
     if (!channel) {
         console.log("!channel fails");
         return;
@@ -185,7 +185,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.get("546433346461499423")
+        guild = client.guilds.get("483278789149851649")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -203,7 +203,7 @@ client.on("guildMemberAdd", (member) => {
 
 client.on('guildMemberAdd', member => {
 
-    const channel = member.guild.channels.find('name', '・discord');
+    const channel = member.guild.channels.find('name', '❰•『welcome』•❱');
   
     const millis = new Date().getTime() - member.user.createdAt.getTime();
     const now = new Date();
@@ -865,7 +865,7 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 });
 
 client.on('message', message => {
-  var prefix = "B";
+  var prefix = "A";
   if (message.author.omar) return;
   if (!message.content.startsWith(prefix)) return;
   var command = message.content.split(" ")[0];
@@ -1042,7 +1042,7 @@ client.on("message", message => {
     })
     
 client.on('message', message => {
-var prefix = "B" // برفكس حقك هني
+var prefix = "A" // برفكس حقك هني
            if (message.content.startsWith(prefix + "id")) {
      var args = message.content.split(" ").slice(1);
      let user = message.mentions.users.first();
@@ -1072,7 +1072,7 @@ var prefix = "B" // برفكس حقك هني
 }       });
 
 client.on('message', message => {
-var prefix = "B" // البريفكس
+var prefix = "A" // البريفكس
 if(message.content.startsWith(prefix +"server")){ // الامر
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply(`**هذه الخاصية للادارة فقط** ❎ `)
 if(!message.channel.guild) return message.reply(' ');
@@ -1110,35 +1110,35 @@ client.on("message", message => {
          .setFooter('Reqused By : ' + message.author.username, message.author.avatarURL)
 	 .setTimestamp()
          .setDescription(`**• Puplic - عام •
-Bavatar ( صوره الشخصيه )
-Bhelp ( عرض قائمه المساعده )
-Bcount ( لعرض عدد الاعضاء )
-Bid ( عرض معلومات الشخصيه )
-Bfm ( لعرض حالت الاعضاء )
-Bping ( لعرض سرعه النت تبعك )
-Bavatar ( لعرض صوره حسابك )
-Bprofile ( لازهار البروفايل حقك )
+Aavatar ( صوره الشخصيه )
+Ahelp ( عرض قائمه المساعده )
+Acount ( لعرض عدد الاعضاء )
+Aid ( عرض معلومات الشخصيه )
+Afm ( لعرض حالت الاعضاء )
+Aping ( لعرض سرعه النت تبعك )
+Aavatar ( لعرض صوره حسابك )
+Aprofile ( لازهار البروفايل حقك )
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
 • Staff - الاداره •
-Bban ( حظر الشخصيه )
-Bkick ( طرد الشخصيه )
-Bmute ( اسكات الشخصيه )
-Bunmute ( فك الاسكات من الشخصيه )
-Bclear ( مسح رسائل المخادثه )
-Bserver ( عرض معلومات السيرفر )
-Bmove ( سحب العضو لرومك الصوتي )
-Bsetcount ( لصنع روم عدد الاعضاء )
-Bsetvoice ( لصنع روم عدد الاعضاء الي في الرومات )
-Bbc ( لارسال بردكاست بمنشن )
-Bbbc ( لارسال بردكاست بدون منشن )
-Bmc ( لقفل روم كتابه )
-Bumc ( لفتح روم كتابه )
-Bautorole ( لتفعيل الاوتو رول )
-Brole ( لاعطاء رتبه )
-Bclear ( لمسح لشات )
-Bclear <num> ( لمسح الشات بعدد )
+Aban ( حظر الشخصيه )
+Akick ( طرد الشخصيه )
+Amute ( اسكات الشخصيه )
+Aunmute ( فك الاسكات من الشخصيه )
+Aclear ( مسح رسائل المخادثه )
+Aserver ( عرض معلومات السيرفر )
+Amove ( سحب العضو لرومك الصوتي )
+Asetcount ( لصنع روم عدد الاعضاء )
+Asetvoice ( لصنع روم عدد الاعضاء الي في الرومات )
+Abc ( لارسال بردكاست بمنشن )
+Abbc ( لارسال بردكاست بدون منشن )
+Amc ( لقفل روم كتابه )
+Aumc ( لفتح روم كتابه )
+Aautorole ( لتفعيل الاوتو رول )
+Arole ( لاعطاء رتبه )
+Aclear ( لمسح لشات )
+Aclear <num> ( لمسح الشات بعدد )
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
@@ -1211,13 +1211,13 @@ client.on("message", async function(msg) {
             }
         }
     }
-});//The code created by @RG , Sha Her#2199
+});//The code created by @Future | Skip#0372
 
 client.on("message", message => {
     let roleembed1 = new Discord.RichEmbed()
     .setDescription(`
     أمثله على الأوامر :
-    $role @RG , Sha Her rolename : لسحب رتبة لعضو معين
+    $role @Future | Skip#0372 rolename : لسحب رتبة لعضو معين
     $role all rolename : لسحب رتبة للجميع
     $role humans rolename : لسحب رتبة للاشخاص فقط
     $role bots rolename : لسحب رتبة لجميع البوتات`)
